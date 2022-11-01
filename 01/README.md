@@ -28,8 +28,13 @@ Excel custom formats
 форматируется строка.
 
 Инструкция сборки:
+
 mkdir build
+
 cd build 
+
 cmake ..
+
 make
+
 ./test/test
