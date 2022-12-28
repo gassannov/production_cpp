@@ -88,10 +88,14 @@ ExcelFormat::ExcelFormat(std::string format_str) {
         switch (i) {
             case 0:
                 pos_int_ = token;
+                break;
             case 1:
                 neg_int_ = token;
+                break;
             case 2:
                 zero_str_ = token;
+            default:
+                break;
         }
         i++;
     }
