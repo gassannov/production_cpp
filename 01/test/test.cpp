@@ -31,3 +31,19 @@ TEST(test, TestStrFormat){
     std::string neg = excelFormat->format("some");
     EXPECT_EQ(neg, "str:some");
 }
+
+// add test
+TEST(test, TestZeroInFormat){
+    std::string format_str = "0####;-0000;0;str:@";
+    Format* excelFormat = new ExcelFormat(format_str);
+    std::string pos = excelFormat->format(200);
+    EXPECT_EQ(pos, "00200");
+}
+
+// add test
+TEST(test, TestNegFormat){
+    std::string format_str = "0000;-0000;0;str:@";
+    Format* excelFormat = new ExcelFormat(format_str);
+    std::string neg = excelFormat->format(-200);
+    EXPECT_EQ(neg, "-0200");
+}
