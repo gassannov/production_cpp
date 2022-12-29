@@ -41,6 +41,10 @@ std::string ExcelFormat::format(int num) {
     }
     else if(num < 0){
         format_string = neg_int_;
+        num = -num; // fix
+    }
+    else {
+        return zero_str_;
     }
     std::string output_str;
     for (int i = format_string.size()-1;i >= 0 ;i--){
